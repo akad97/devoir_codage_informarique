@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QCM de 40 questions sur le codage et les systèmes de numération avec correction automatique">
+    <meta name="author" content="Votre Nom">
+    <title>QCM Codage & Systèmes de Numération - Correction Automatique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <header class="header">
+                <h1>QCM Codage & Systèmes de Numération</h1>
+                <p class="subtitle">40 questions sur binaire, octal, hexadécimal, ASCII et plus</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Vrai/Faux</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Choix unique</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Choix multiples</span>
+                    </div>
+                </div>
+            </header>
+
+            <div id="results" class="results hidden">
+                <h2>📊 Résultats</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="scoreDisplay"></div>
+                        <div class="result-label">Score Total</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="percentage"></div>
+                        <div class="result-label">Pourcentage</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="gradeDisplay"></div>
+                        <div class="result-label">Note /20</div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="sectionsContainer"></div>
+
+            <div id="submitContainer" class="submit-container hidden">
+                <div class="progress-info">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                    <p id="progressText" class="progress-text">0 / 40 questions répondues</p>
+                </div>
+                <button onclick="calculateScore()" id="submitBtn" class="btn btn-submit" disabled>
+                    <span id="btnText">Compléter toutes les questions</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 - QCM Codage & Systèmes de Numération | AKAD </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
